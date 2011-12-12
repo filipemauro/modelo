@@ -1,0 +1,101 @@
+/********************************************//**
+
+	@authors	Desenvolvedores da Craff Tecnologia.
+	@mainpage	Beam Firmware A.P.I
+	@brief 		Beam Firmware Application Programming Interface
+
+	@section 	intro_sec Introducao
+				Esse pacote contem a biblioteca de firmware, incluindo testes de unidade da aplicacao.
+	A documentacao e mantida com os comentarios que seguem as regras do doxygen. Documentacao sobre o funcionamento
+	e sobre as tags doxygen podem ser obtidas em http://www.stack.nl/~dimitri/doxygen/manual.html
+
+
+	@section	lic_sec Licenca
+				Copyright(C)2011 Craff Comercio Desenvolvimento Hardware, Software e Internet ltda ME.
+http://www.craff.com.br All rights reserved.
+
+	@sa
+	Informacoes sobre o hardware e firmware do projeto podem ser obtidos no email andre.dantas@craff.com.br.
+
+	@page conf Configuration bits
+	@brief Os bits de configuracao estao setados no codigo, no arquivo #main. Essas configuracoes devem ser as seguites:
+
+	@par WDTEN	@brief -	OFF
+@warning - WatchDog desabilitado em hardware, mas sera habilitado em software.
+	@par PLLDIV	@brief -	5
+- Oscilador dividido por 5( Entrada de 20MHz )
+	@par STVREN	@brief -	ON
+- Reset no overflow/underflow da pilha habilitado.
+	@par XINST	@brief -	OFF
+- Set de intrucoes estendido desabilitado.
+	@par CPUDIV	@brief -	OSC1
+- WatchDog desabilitado em hardware, mas sera habilitado em software.
+	@par CP0	@brief -	ON
+- Memoria de progama esta protegida
+	@par FOSC 	@brief - HSPLL
+- PLL habilitado
+	@par FCMEN  @brief - ON
+- Reset por falha no oscilador habilitado
+	@par IESO	@brief - OFF
+- Startup em dois tempos desabilitados.
+	@par WDTPS  @brief - 8192
+@warning - WatchDog timer postcaler de 8192.
+	@par CCP2MX	@brief - DEFAULT
+- CCP2 Multiplexado com RC1.
+	@par MSSPMSK	@brief - MSK7
+- 7-Bit Address Masking mode enable.
+
+	@file		main.c
+	@defgroup 	Main Main
+	@brief		Este modulo contem as funcoes main e de inicializacao do sistema
+			  	@{
+
+***********************************************/
+
+/************************
+	Include Files
+************************/
+
+/********************************************//**
+	Configuration bits
+************************************************/
+#pragma config WDTEN = OFF
+#pragma config PLLDIV = 5
+#pragma config STVREN = ON
+#pragma config XINST = OFF
+#pragma config CPUDIV = OSC1
+#pragma config CP0 = OFF
+#pragma config FOSC = HSPLL
+#pragma config FCMEN = ON
+#pragma config IESO = OFF
+#pragma config WDTPS = 8192
+#pragma config CCP2MX = DEFAULT
+#pragma config MSSPMSK = MSK7
+
+/************************
+	Macros & Constants
+************************/
+
+
+/********************************
+	Global Variables
+********************************/
+
+/********************************
+	Local Functions Prototype
+********************************/
+
+
+/********************************************//**
+
+	@fn			void main( void )
+	@brief		Arquivo principal do sistema. Resposavel por chamar todos os outros modulos.
+
+ /*********************************************/
+void main( void )
+{
+
+}
+
+/** @} */// end of group1
+-- 
